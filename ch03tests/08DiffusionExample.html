@@ -1,0 +1,1236 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="lt-ie9 no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset=utf-8 />
+    <meta name="author" content="UCL" />
+    <meta name="description" content="UCL Homepage" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- social meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@uclnews">
+    <meta name="twitter:title" content="UCL - London's Global University">
+    <meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+    <meta name="twitter:creator" content="@UCLWAMS">
+    <meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+    <meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+    <meta property="og:title" content="UCL - London's Global University" />
+    <meta property="og:url" content="http://www.ucl.ac.uk" />
+    <meta property="og:site_name" content="UCL" />
+    <meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+    <meta property="og:type" content="website" />
+    <meta property="og:profile_id" content="uclofficial" />
+    <!-- end social meta -->
+
+  <title>Diffusion Example</title>
+
+  <link href="/rsd-engineeringcourse/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/rsd-engineeringcourse/css/jekyll-styles.css" rel="stylesheet" type="text/css">
+  <link href="/rsd-engineeringcourse/site-styles/local_styles.css" rel="stylesheet" type="text/css">
+  <link href="/rsd-engineeringcourse/site-styles/ipython.css" rel="stylesheet" type="text/css">
+
+  <link rel="shortcut icon" href="/rsd-engineeringcourse/images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/rsd-engineeringcourse/favicon-152.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/rsd-engineeringcourse/favicon-144.png">
+
+  <script src="/rsd-engineeringcourse/js/lib/modernizr-custom.js"></script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+
+    <script>
+      var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+
+      Modernizr.load({
+        //cutting the mustard as used by the BBC
+        test: cuttingTheMustard
+        //if old browser load the shiv
+        ,
+        nope: [
+          '/rsd-engineeringcourse/js/lib/html5shiv-printshiv.min.js', '/rsd-engineeringcourse/js/lib/respond.min.js'
+        ]
+      });
+      //set conditional assets for main.js
+      var globalSiteSpecificVars = {
+        pathToJquery: "/rsd-engineeringcourse/js/lib/jquery-1.9.1.min",
+        googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
+      }
+      if (cuttingTheMustard) {
+        globalSiteSpecificVars.pathToJquery = '/rsd-engineeringcourse/js/lib/jquery-2.1.1.min';
+      }
+    </script>
+    <script src="/rsd-engineeringcourse/js/lib/require.min.js"></script>
+    <script src="/rsd-engineeringcourse/js/main.js"></script>
+    <script>
+      require.config({
+        baseUrl: '/rsd-engineeringcourse/js/lib'
+      });
+        require(["app/general", "app/searchWithAutoComplete", "app/tabs"]);//load the default stuff
+    </script>
+</head>
+
+<body id="index" class="layout-vertical layout-vertical--nav-1col">
+
+  <header class="header header--desktop">
+
+  <a class="header__close" href="#">
+    <img src="/rsd-engineeringcourse/images/close.png" class="lazy" data-src="//static.ucl.ac.uk/indigo/images/close.png" alt="X" />Close</a>
+
+  <div class="masthead">
+
+  <div class="wrapper clearfix">
+
+      <div class="masthead__search">
+					<form action="#" method="get">
+						<div class="search-form">
+							<input type="search" placeholder="Search UCL websites, people and more" class="search-form__input search-form__input--search" value="">
+						</div>
+						<input type="submit" name="sumbit" value="Go" class="btn search-form__input search-form__input--submit" />
+					</form>
+				</div>
+
+
+				<nav class="masthead__nav m-clear">
+					<ul class="masthead__list">
+						<li class="masthead__item"><a href="index.php" class="masthead__link">UCL Home</a>
+						</li>
+						<li class="masthead__item"><a href="prospective-students.php" class="masthead__link">Prospective students</a>
+						</li>
+						<li class="masthead__item"><a href="current-students.php" class="masthead__link">Current students</a>
+						</li>
+						<li class="masthead__item"><a href="staff.php" class="masthead__link">Staff</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+</div><!-- end .masthead -->
+
+
+  <div class="wrapper">
+
+    <div class="photograph">
+  <div class="brand">
+    <p class="brand__heading">MPHYG001: Research Software Engineering With Python</p>
+    <a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
+    <img src="//cdn.ucl.ac.uk/img/blank.gif" data-src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo lazy">  
+  </div>
+</div>
+
+
+    <div class="sidebar">
+
+      <nav class="nav nav--mobile">
+        <ul>
+          
+
+
+
+
+        </ul>
+      </nav>
+
+      <nav class="nav nav--left">
+        <ul>
+          
+
+ <li class="active"> <a href="/rsd-engineeringcourse/ch00python/">Introduction to Python</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/00pythons.html">Many kinds of Python</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/010exemplar.html">An example program</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/015variables.html">Variables</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/016using_functions.html">Using Functions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/023types.html">Types</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/025containers.html">Containers</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/028dictionaries.html">Dictionaries</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/029structures.html">Structures</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/030MazeSolution.html">Maze Solution</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/032conditionality.html">Conditionality</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/035looping.html">Looping</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/036MazeSolution2.html">Maze Control Solution</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/037comprehensions.html">Comprehensions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/038SolutionComprehension.html">Maze comprehension solution.</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/04functions.html">Defining functions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/050import.html">Modules</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/101Classes.html">Classes</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00python/105TextFiles.html">Writing Libraries</a> </li> </ul> </li><li class="active"> <a href="/rsd-engineeringcourse/ch01data/">Research Data in Python</a><ul><li class="inactive"> <a href="/rsd-engineeringcourse/ch01data/060files.html">Working with files</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01data/061internet.html">Internet</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01data/062csv.html">CSV</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01data/064JsonYamlXML.html">Structured Datafiles</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01data/065MazeSaved.html">Maze Files Solution</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01data/066QuakeExercise.html">Earthquakes Exercise</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01data/068QuakesSolution.html">Quakes Solution</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01data/072plotting.html">Plotting</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01data/082NumPy.html">Numerical Python</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01data/084Boids.html">The Boids</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01data/110Capstone.html">Understanding the Exemplar</a> </li> </ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch02git/">Version Control</a><ul><li class="inactive"> <a href="/rsd-engineeringcourse/ch02git/01Intro.html">Introduction to Version Control</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02git/02Solo.html">Solo Git</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02git/03Mistakes.html">Fixing Mistakes</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02git/04Publishing.html">Publishing</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02git/05Collaboration.html">Collaboration</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02git/06ForkAndPull.html">Fork and Pull</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02git/09GitTheory.html">Git Theory</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02git/10Branches.html">Branches</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02git/11Miscellany.html">Git miscellany</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02git/12Remotes.html">Remotes</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02git/13Rebase.html">Rebase</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02git/14Bisect.html">Bisect</a> </li></ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/">Testing</a><ul> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/01testingbasics.html">Testing Basics</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/02SaskatchewanFields.html">The Fields of Saskatchewan</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/03Nose.html">Nose</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/04EnergyExample.html">Energy Example</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/05Mocks.html">Mocks</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/06Debugger.html">Debugger</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/07CI.html">Continuous Integration</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/08DiffusionExample.html">Diffusion Example</a> </li> </ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch04packaging/">Software Projects</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/010Installation.html">Installing Libraries</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/01Libraries.html">Libraries</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/02Argparse.html">Argparse</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/035ExerciseGreengraph.html">Exercise- Packaging Greengraph</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/03Packaging.html">Packaging</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/04documentation.html">Documentation</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/05Process.html">Agile and Waterfall</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/06Licensing.html">Licensing</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/07Issues.html">Issue Tracking</a> </li> </ul> </li><li class="active"> <a href="/rsd-engineeringcourse/ch05construction/">Construction and Design</a><ul><li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/01introduction.html">Construction</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/02conventions.html">Coding Conventions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/03comments.html">Comments</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/05refactoring.html">Refactoring</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/06objects.html">Object Refactorings</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/08objects.html">Object Oriented Design</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/09patterns.html">Design Patterns</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/10boids.html">Exercise - Boids</a> </li> </ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch07dry/">Advanced Programming Techniques</a><ul><li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/01intro.html">Don't Repeat Yourself</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/020Functional.html">Functional Programming</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/025Iterators.html">Iterators, Generators, Decorators, and Contexts</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/040Exceptions.html">Exceptions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/050Operators.html">Operator Overloading</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/060Metaprogramming.html">Metaprogramming</a> </li></ul> </li><li class="active"> <a href="/rsd-engineeringcourse/ch08performance/">Programming for Speed</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/010intro.html">Two Mandelbrots</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/015mandels.html">Faster Mandelbrots?</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/020numpy.html">NumPy</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/040cython.html">Cython</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/050scaling.html">Scaling</a> </li></ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/session99/">Installation</a><ul><li class="inactive"> <a href="/rsd-engineeringcourse/session99/linux.html">Linux</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/session99/mac.html">Mac OSX</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/session99/windows.html">Windows</a> </li></ul> </li> 
+
+        </ul>
+      </nav>
+
+    </div>
+    <!-- end .sidebar -->
+
+    <nav class="nav nav--top">
+      <ul>
+        
+      </ul>
+    </nav>
+
+  </div>
+  <!-- end .wrapper -->
+
+  </header>
+  <!-- end .header -->
+
+  <div class="site-content wrapper">
+
+    <header class="header header--mobile default-header">
+      <a class="header__open" href="#">
+        <img src="/rsd-engineeringcourse/images/ucl-menu.svg" alt="Menu" />
+      </a>
+    </header>
+
+    <div class="site-content__inner clearfix">
+      <div class="site-content__body">
+
+          <nav class="breadcrumb clearfix">
+            <ul class="breadcrumb__list">
+              <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/">UCL</a></li>
+
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/ISD">ISD</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services">Our services</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services/research-it">Research IT</a></li>
+  
+    <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/isd/services/research-it/training">Training</a></li>
+  
+
+<li class="breadcrumb__item"><a href="/rsd-engineeringcourse/">MPHYG0001</a></li>
+
+
+
+            </ul>
+          </nav>
+         <div class="site-content__main">
+          
+             <div id="slidelink">
+               <a href="/rsd-engineeringcourse/ch03tests/08DiffusionExample.html.ipynb">Notebook download</a>
+             </div>
+          
+          
+          
+
+    <div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Recap-example:-Monte-Carlo">Recap example: Monte-Carlo<a class="anchor-link" href="#Recap-example:-Monte-Carlo">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Implement-and-test-a-simple-Monte-Carlo-algorithm">Problem: Implement and test a simple Monte-Carlo algorithm<a class="anchor-link" href="#Problem:-Implement-and-test-a-simple-Monte-Carlo-algorithm">&#182;</a></h3><p>Given an input function (energy) and starting point (density) and a temperature $T$:</p>
+<ol>
+<li>Compute energy at current density.</li>
+<li>Move randomly chosen agent randomly left or right.</li>
+<li>Compute second energy.</li>
+<li>Compare the two energies:</li>
+<li>If second energy is lower, accept move.</li>
+<li>$\beta$ is a parameter which determines how likely
+the simulation is to move from a 'less favourable' situation to a 'more favourable' one.</li>
+<li>Compute $P_0=e^{-\beta (E_1 - E_0)}$ and $P_1$ a random number between 0 and 1,</li>
+<li>If $P_0 > P_1$, do the move anyway.</li>
+<li>Repeat.</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>the algorithm should work for (m)any energy function(s).</li>
+<li>there should be separate tests for separate steps! What constitutes a step?</li>
+<li>tests for the Monte-Carlo should not depend on other parts of code.</li>
+<li>Use <a href="http://matplotlib.org/">matplotlib</a> to plot density at each iteration, and make an animation</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Solution">Solution<a class="anchor-link" href="#Solution">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We need to break our problem down into pieces:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>A function to generate a random change: <code>random_agent()</code>, <code>random_direction()</code></li>
+<li>A function to compute the energy before the change and after it: <code>energy()</code></li>
+<li>A function to determine the probability of a change given the energy difference (1 if decreases, otherwise based on exponential): <code>change_density()</code></li>
+<li>A function to determine whether to execute a change or not by drawing a random number<code>accept_change()</code></li>
+<li>A method to iterate the above procedure: <code>step()</code></li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Next Step: Think about the possible unit tests</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Input insanity: e.g. density should non-negative integer; testing by giving negative values etc.</li>
+<li><code>change_density()</code>: density is change by a particle hopping left or right? Do all positions have an equal chance of moving?</li>
+<li><code>accept_change()</code> will move be accepted when second energy is lower?</li>
+<li>Make a small test case for the main algorithm. (Hint: by using mocking, we can pre-set who to move where.)</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span>%%bash
+mkdir -p DiffusionExample
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> DiffusionExample/MonteCarlo.py
+import matplotlib.pyplot as plt
+from numpy import sum, array
+from numpy.random import randint, choice
+
+
+
+class MonteCarlo(object):
+    &quot;&quot;&quot; A simple Monte Carlo implementation &quot;&quot;&quot;
+    def __init__(self, energy, density, temperature=1, itermax=1000):
+        from numpy import any, array
+        density = array(density)
+        self.itermax = itermax
+        
+        if temperature == 0: raise NotImplementedError(
+                &quot;Zero temperature not implemented&quot;)
+        if temperature &lt; 0e0: raise ValueError(
+                &quot;Negative temperature makes no sense&quot;)
+
+        if len(density) &lt; 2: 
+            raise ValueError(&quot;Density is too short&quot;)
+        # of the right kind (integer). Unless it is zero length,
+        # in which case type does not matter.
+        if density.dtype.kind != &#39;i&#39; and len(density) &gt; 0:
+            raise TypeError(&quot;Density should be an array of *integers*.&quot;)
+        # and the right values (positive or null)
+        if any(density &lt; 0):
+            raise ValueError(&quot;Density should be an array of&quot;+
+                             &quot;*positive* integers.&quot;)
+        if density.ndim != 1:
+            raise ValueError(&quot;Density should be an a *1-dimensional*&quot;+
+                             &quot;array of positive integers.&quot;)
+        if sum(density) == 0: 
+            raise ValueError(&quot;Density is empty.&quot;)
+
+
+        self.current_energy = energy(density)
+        self.temperature = temperature
+        self.density = density
+        
+    def random_direction(self): return choice([-1, 1])
+
+        
+    def random_agent(self, density):
+        #Particle index
+        particle = randint(sum(density))
+        current = 0
+        for location, n in enumerate(density):
+            current += n
+            if current &gt; particle: break
+        return location
+        
+    def change_density(self, density):
+        &quot;&quot;&quot; Move one particle left or right. &quot;&quot;&quot;
+        
+        location = self.random_agent(density)
+        
+        # Move direction
+        if(density[location]-1&lt;0): return array(density)
+        if location == 0: direction = 1
+        elif location == len(density) - 1: direction = -1
+        else: direction = self.random_direction()
+
+        # Now make change 
+        result = array(density)
+        result[location] -= 1
+        result[location + direction]  += 1
+        return result
+
+    def accept_change(self, prior, successor): 
+        &quot;&quot;&quot; Returns true if should accept change. &quot;&quot;&quot;
+        from numpy import exp
+        from numpy.random import uniform
+        if successor &lt;= prior: return True
+        else:
+            return exp(-(successor - prior) / self.temperature) &gt; uniform()
+
+    def step(self):
+        iteration = 0
+        while iteration &lt; self.itermax:
+            new_density = self.change_density(self.density)
+            new_energy = energy(new_density)
+
+            accept = self.accept_change(self.current_energy, new_energy)
+            if accept: 
+                self.density, self.current_energy = new_density, new_energy                
+            iteration+=1
+            
+        return self.current_energy, self.density
+    
+    
+def energy(density, coefficient=1):
+  &quot;&quot;&quot; Energy associated with the diffusion model
+      :Parameters:
+      density: array of positive integers
+      Number of particles at each position i in the array/geometry
+  &quot;&quot;&quot;
+  from numpy import array, any, sum
+
+  # Make sure input is an array
+  density = array(density)
+
+  # of the right kind (integer). Unless it is zero length, in which case type does not matter.
+  if density.dtype.kind != &#39;i&#39; and len(density) &gt; 0:
+    raise TypeError(&quot;Density should be an array of *integers*.&quot;)
+  # and the right values (positive or null)
+  if any(density &lt; 0):
+    raise ValueError(&quot;Density should be an array&quot;+
+                     &quot;of *positive* integers.&quot;)
+  if density.ndim != 1:
+    raise ValueError(&quot;Density should be an a *1-dimensional*&quot;+
+                     &quot;array of positive integers.&quot;)
+  
+  return coefficient * 0.5 * sum(density * (density - 1))
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Writing DiffusionExample/MonteCarlo.py
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;DiffusionExample&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">MonteCarlo</span> <span class="kn">import</span> <span class="n">MonteCarlo</span><span class="p">,</span> <span class="n">energy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy.random</span> <span class="kn">as</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">animation</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">JSAnimation</span> <span class="kn">import</span> <span class="n">IPython_display</span>
+
+
+<span class="n">Temperature</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">density</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">100</span><span class="p">)]</span>
+<span class="n">density</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">density</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">density</span> <span class="o">=</span> <span class="n">density</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">density</span><span class="p">)),</span><span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">density</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">density</span><span class="p">)),</span> <span class="n">density</span><span class="p">)</span>
+
+<span class="n">txt_energy</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;Energy = 0&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Temperature = 0.1&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Energy Density&#39;</span><span class="p">)</span>
+
+
+<span class="n">mc</span><span class="o">=</span><span class="n">MonteCarlo</span><span class="p">(</span><span class="n">energy</span><span class="p">,</span> <span class="n">density</span><span class="p">,</span> <span class="n">temperature</span> <span class="o">=</span> <span class="n">Temperature</span><span class="p">)</span>
+
+    
+<span class="k">def</span> <span class="nf">simulate</span><span class="p">(</span><span class="n">step</span><span class="p">):</span>
+    <span class="n">energy</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+    <span class="n">image</span><span class="o">.</span><span class="n">set_offsets</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">density</span><span class="p">)),</span> <span class="n">density</span><span class="p">))</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+    <span class="n">txt_energy</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s1">&#39;Energy = </span><span class="si">%f</span><span class="s1">&#39;</span><span class="o">%</span> <span class="n">energy</span><span class="p">)</span>
+    
+
+<span class="n">animation</span><span class="o">.</span><span class="n">FuncAnimation</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">simulate</span><span class="p">,</span> <span class="n">frames</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+                              <span class="n">interval</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">blit</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c1">#anim</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/font_manager.py:273: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
+  warnings.warn(&#39;Matplotlib is building the font cache using fc-list. This may take a moment.&#39;)
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+
+<span class="ansi-red-fg">RuntimeError</span>Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-3-59ca3ce5cfd2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     34</span> 
+<span class="ansi-green-intense-fg ansi-bold">     35</span> animation.FuncAnimation(fig, simulate, frames=200,
+<span class="ansi-green-fg">---&gt; 36</span><span class="ansi-red-fg">                               interval=50, blit=True)
+</span><span class="ansi-green-intense-fg ansi-bold">     37</span> 
+<span class="ansi-green-intense-fg ansi-bold">     38</span> <span class="ansi-red-fg">#anim</span>
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/animation.pyc</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, fig, func, frames, init_func, fargs, save_count, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1191</span>         self<span class="ansi-blue-fg">.</span>_save_seq <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">   1192</span> 
+<span class="ansi-green-fg">-&gt; 1193</span><span class="ansi-red-fg">         </span>TimedAnimation<span class="ansi-blue-fg">.</span>__init__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> fig<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1194</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1195</span>         <span class="ansi-red-fg"># Need to reset the saved seq, since right now it will contain data</span>
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/animation.pyc</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, fig, interval, repeat_delay, repeat, event_source, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1035</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1036</span>         Animation.__init__(self, fig, event_source=event_source,
+<span class="ansi-green-fg">-&gt; 1037</span><span class="ansi-red-fg">                            *args, **kwargs)
+</span><span class="ansi-green-intense-fg ansi-bold">   1038</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1039</span>     <span class="ansi-green-fg">def</span> _step<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/animation.pyc</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, fig, event_source, blit)</span>
+<span class="ansi-green-intense-fg ansi-bold">    647</span>                                                       self._stop)
+<span class="ansi-green-intense-fg ansi-bold">    648</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_blit<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 649</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_setup_blit<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    650</span> 
+<span class="ansi-green-intense-fg ansi-bold">    651</span>     <span class="ansi-green-fg">def</span> _start<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/animation.pyc</span> in <span class="ansi-cyan-fg">_setup_blit</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    933</span>         self._resize_id = self._fig.canvas.mpl_connect(&#39;resize_event&#39;,
+<span class="ansi-green-intense-fg ansi-bold">    934</span>                                                        self._handle_resize)
+<span class="ansi-green-fg">--&gt; 935</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_post_draw<span class="ansi-blue-fg">(</span>None<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>_blit<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    936</span> 
+<span class="ansi-green-intense-fg ansi-bold">    937</span>     <span class="ansi-green-fg">def</span> _handle_resize<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/animation.pyc</span> in <span class="ansi-cyan-fg">_post_draw</span><span class="ansi-blue-fg">(self, framedata, blit)</span>
+<span class="ansi-green-intense-fg ansi-bold">    898</span>             self<span class="ansi-blue-fg">.</span>_blit_draw<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_drawn_artists<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>_blit_cache<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    899</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 900</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_fig<span class="ansi-blue-fg">.</span>canvas<span class="ansi-blue-fg">.</span>draw_idle<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    901</span> 
+<span class="ansi-green-intense-fg ansi-bold">    902</span>     <span class="ansi-red-fg"># The rest of the code in this class is to facilitate easy blitting</span>
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/backend_bases.pyc</span> in <span class="ansi-cyan-fg">draw_idle</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2024</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>_is_idle_drawing<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2025</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>_idle_draw_cntx<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 2026</span><span class="ansi-red-fg">                 </span>self<span class="ansi-blue-fg">.</span>draw<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2027</span> 
+<span class="ansi-green-intense-fg ansi-bold">   2028</span>     <span class="ansi-green-fg">def</span> draw_cursor<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> event<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/backends/backend_agg.pyc</span> in <span class="ansi-cyan-fg">draw</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    472</span> 
+<span class="ansi-green-intense-fg ansi-bold">    473</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 474</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>figure<span class="ansi-blue-fg">.</span>draw<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>renderer<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    475</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    476</span>             RendererAgg<span class="ansi-blue-fg">.</span>lock<span class="ansi-blue-fg">.</span>release<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/artist.pyc</span> in <span class="ansi-cyan-fg">draw_wrapper</span><span class="ansi-blue-fg">(artist, renderer, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">     60</span>     <span class="ansi-green-fg">def</span> draw_wrapper<span class="ansi-blue-fg">(</span>artist<span class="ansi-blue-fg">,</span> renderer<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     61</span>         before<span class="ansi-blue-fg">(</span>artist<span class="ansi-blue-fg">,</span> renderer<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 62</span><span class="ansi-red-fg">         </span>draw<span class="ansi-blue-fg">(</span>artist<span class="ansi-blue-fg">,</span> renderer<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     63</span>         after<span class="ansi-blue-fg">(</span>artist<span class="ansi-blue-fg">,</span> renderer<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     64</span> 
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/figure.pyc</span> in <span class="ansi-cyan-fg">draw</span><span class="ansi-blue-fg">(self, renderer)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1163</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1164</span>         self<span class="ansi-blue-fg">.</span>_cachedRenderer <span class="ansi-blue-fg">=</span> renderer
+<span class="ansi-green-fg">-&gt; 1165</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>canvas<span class="ansi-blue-fg">.</span>draw_event<span class="ansi-blue-fg">(</span>renderer<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1166</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1167</span>     <span class="ansi-green-fg">def</span> draw_artist<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> a<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/backend_bases.pyc</span> in <span class="ansi-cyan-fg">draw_event</span><span class="ansi-blue-fg">(self, renderer)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1807</span>         s <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;draw_event&#39;</span>
+<span class="ansi-green-intense-fg ansi-bold">   1808</span>         event <span class="ansi-blue-fg">=</span> DrawEvent<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">,</span> renderer<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 1809</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>callbacks<span class="ansi-blue-fg">.</span>process<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">,</span> event<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1810</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1811</span>     <span class="ansi-green-fg">def</span> resize_event<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/cbook.pyc</span> in <span class="ansi-cyan-fg">process</span><span class="ansi-blue-fg">(self, s, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    561</span>             <span class="ansi-green-fg">for</span> cid<span class="ansi-blue-fg">,</span> proxy <span class="ansi-green-fg">in</span> list<span class="ansi-blue-fg">(</span>six<span class="ansi-blue-fg">.</span>iteritems<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>callbacks<span class="ansi-blue-fg">[</span>s<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    562</span>                 <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 563</span><span class="ansi-red-fg">                     </span>proxy<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    564</span>                 <span class="ansi-green-fg">except</span> ReferenceError<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    565</span>                     self<span class="ansi-blue-fg">.</span>_remove_proxy<span class="ansi-blue-fg">(</span>proxy<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/cbook.pyc</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    428</span>             mtd <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>func
+<span class="ansi-green-intense-fg ansi-bold">    429</span>         <span class="ansi-red-fg"># invoke the callable and return the result</span>
+<span class="ansi-green-fg">--&gt; 430</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> mtd<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    431</span> 
+<span class="ansi-green-intense-fg ansi-bold">    432</span>     <span class="ansi-green-fg">def</span> __eq__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/animation.pyc</span> in <span class="ansi-cyan-fg">_start</span><span class="ansi-blue-fg">(self, *args)</span>
+<span class="ansi-green-intense-fg ansi-bold">    659</span> 
+<span class="ansi-green-intense-fg ansi-bold">    660</span>         <span class="ansi-red-fg"># Now do any initial draw</span>
+<span class="ansi-green-fg">--&gt; 661</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_init_draw<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    662</span> 
+<span class="ansi-green-intense-fg ansi-bold">    663</span>         <span class="ansi-red-fg"># Add our callback for stepping the animation and</span>
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/animation.pyc</span> in <span class="ansi-cyan-fg">_init_draw</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1219</span>         <span class="ansi-red-fg"># artists.</span>
+<span class="ansi-green-intense-fg ansi-bold">   1220</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_init_func <span class="ansi-green-fg">is</span> None<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 1221</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_draw_frame<span class="ansi-blue-fg">(</span>next<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>new_frame_seq<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1222</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1223</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/animation.pyc</span> in <span class="ansi-cyan-fg">_draw_frame</span><span class="ansi-blue-fg">(self, framedata)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1244</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_blit<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   1245</span>             <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_drawn_artists <span class="ansi-green-fg">is</span> None<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 1246</span><span class="ansi-red-fg">                     raise RuntimeError(&#39;The animation function must return a &#39;
+</span><span class="ansi-green-intense-fg ansi-bold">   1247</span>                                        &#39;sequence of Artist objects.&#39;)
+<span class="ansi-green-intense-fg ansi-bold">   1248</span>             <span class="ansi-green-fg">for</span> a <span class="ansi-green-fg">in</span> self<span class="ansi-blue-fg">.</span>_drawn_artists<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">RuntimeError</span>: The animation function must return a sequence of Artist objects.</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> DiffusionExample/test_model.py
+from MonteCarlo import MonteCarlo
+from nose.tools import assert_equal
+from nose.tools import assert_equal, assert_almost_equal, assert_true, assert_raises
+from mock import MagicMock
+
+
+def test_input_sanity():
+    &quot;&quot;&quot; Check incorrect input do fail &quot;&quot;&quot;
+    energy = MagicMock()
+    
+    with assert_raises(NotImplementedError) as exception: 
+        MonteCarlo(sum, [1, 1, 1], 0e0)
+    with assert_raises(ValueError) as exception: 
+        MonteCarlo(energy, [1, 1, 1], temperature=-1e0)
+        
+    with assert_raises(TypeError) as exception: 
+        MonteCarlo(energy, [1.0, 2, 3])
+    with assert_raises(ValueError) as exception: 
+        MonteCarlo(energy, [-1, 2, 3])
+    with assert_raises(ValueError) as exception: 
+        MonteCarlo(energy, [[1, 2, 3], [3, 4, 5]])
+    with assert_raises(ValueError) as exception: 
+        MonteCarlo(energy, [3])
+    with assert_raises(ValueError) as exception: 
+        MonteCarlo(energy, [0, 0])
+    
+    
+    
+def test_move_particle_one_over():
+    &quot;&quot;&quot; Check density is change by a particle hopping left or right. &quot;&quot;&quot;
+    from numpy import nonzero, multiply
+    from numpy.random import randint
+    
+    energy = MagicMock()
+    
+    for i in range(100): 
+        # Do this n times, to avoid 
+        # issues with random numbers
+        # Create density
+        
+        density = randint(50, size=randint(2, 6))
+        mc = MonteCarlo(energy, density)
+        # Change it
+        new_density = mc.change_density(density)
+
+        # Make sure any movement is by one
+        indices = nonzero(density - new_density)[0]
+        assert_equal(len(indices), 2, &quot;densities differ in two places&quot;)
+        assert_equal( 
+            multiply.reduce((density - new_density)[indices]), 
+            -1,
+            &quot;densities differ by + and - 1&quot;
+        )
+        
+        
+def test_equal_probability():
+    &quot;&quot;&quot; Check particles have equal probability of movement. &quot;&quot;&quot;
+    from numpy import array, sqrt, count_nonzero
+    
+    energy = MagicMock()
+    
+    density = array([1, 0, 99])
+    mc = MonteCarlo(energy, density)
+    changes_at_zero = [
+        (density - mc.change_density(density))[0] != 0 for i in range(10000)]
+    assert_almost_equal(
+        count_nonzero(changes_at_zero), 
+        0.01 * len(changes_at_zero), 
+        delta = 0.5 * sqrt(len(changes_at_zero))
+    )
+    
+def test_accept_change():
+    &quot;&quot;&quot; Check that move is accepted if second energy is lower &quot;&quot;&quot;
+    from numpy import sqrt, count_nonzero, exp
+    
+    energy = MagicMock
+    mc = MonteCarlo(energy, [1, 1, 1], temperature=100.0)
+    # Should always be true. 
+    # But do more than one draw, 
+    # in case randomness incorrectly crept into
+    # implementation
+    for i in range(10):
+        assert_true(mc.accept_change(0.5, 0.4))
+        assert_true(mc.accept_change(0.5, 0.5))
+
+    # This should be accepted only part of the time, 
+    # depending on exponential distribution
+    prior, successor = 0.4, 0.5
+    accepted = [mc.accept_change(prior, successor) for i in range(10000)]
+    assert_almost_equal( 
+        count_nonzero(accepted) / float(len(accepted)),
+        exp(-(successor - prior) / mc.temperature),
+        delta = 3e0 / sqrt(len(accepted))
+    )
+
+    
+
+def test_main_algorithm():
+    import numpy as np
+    from numpy import testing
+    from mock import Mock
+    
+    density = [1, 1, 1, 1, 1]
+    energy = MagicMock()
+    mc = MonteCarlo(energy, density, itermax = 5)
+    
+    acceptance = [True, True, True, True, True]
+    mc.accept_change = Mock(side_effect = acceptance)
+    mc.random_agent = Mock(side_effect = [0, 1, 2, 3, 4])
+    mc.random_direction = Mock(side_effect = [1, 1, 1, 1, -1])
+    np.testing.assert_equal(mc.step()[1], [0,1,1,2,1])
+
+    
+    
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Writing DiffusionExample/test_model.py
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span>%%bash
+<span class="nb">cd</span> DiffusionExample
+nosetests
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/travis/virtualenv/python2.7.10/lib/python2.7/site-packages/matplotlib/font_manager.py:273: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
+  warnings.warn(&#39;Matplotlib is building the font cache using fc-list. This may take a moment.&#39;)
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 1.362s
+
+OK
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- end .site-content -->
+
+  <footer class="footer wrapper">
+  <div class="footer__inner clearfix">
+             <article class="block block--col-1">
+                <h2 class="as-h5">Facilities</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/library/">Library</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
+					<li class="footer__item"><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-2">
+                <h2 class="as-h5">Locations</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/australia">UCL Australia</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/global">UCL Global</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-3">
+                <h2 class="as-h5">Connect with us</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/makeyourmark">Give to UCL</a></li>
+				</ul>
+
+      </article>
+  
+    <hr class="clear">
+    <ul class="footer__list list-unstyled zero-bottom">
+      <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
+    </ul>
+    <ul class="list-inline footer__list list-unstyled list-inline--divided">
+      <li class="text-muted small">Copyright © 2016-10-05 15:08:09 +0000 UCL</li>
+      <li class="text-muted small"><a href="#">Disclaimer</a>
+      </li>
+      <li class="text-muted small"><a href="#">Freedom of Information</a>
+      </li>
+      <li class="text-muted small"><a href="#">Accessibility</a>
+      </li>
+      <li class="text-muted small"><a href="#">Privacy</a>
+      </li>
+      <li class="text-muted small"><a href="#">Cookies</a>
+      </li>
+      <li class="text-muted small"><a href="#">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
+  <script src="/rsd-engineeringcourse/js/lib/require.min.js"></script>
+  <script src="/rsd-engineeringcourse/js/main.js"></script>
+    <script>
+      require.config({
+        baseUrl: '/rsd-engineeringcourse/js/lib'
+      });
+        require(["app/general", "app/searchWithAutoComplete", "app/tabs"]);//load the default stuff
+    </script>
+
+</body>
+
+</html>
+
